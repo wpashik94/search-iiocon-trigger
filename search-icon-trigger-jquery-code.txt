@@ -1,0 +1,15 @@
+function custom_search_trigger() {
+    ?> 
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('.single-brdr-search').click(function() {
+                jQuery('#searchform-overlay').css({
+                    "opacity": "1", 
+                    "display": "block"
+                });
+            });
+        });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'custom_search_trigger');
